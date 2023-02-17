@@ -1,0 +1,8 @@
+<form (ngSubmit)="createItem()">
+    <input type="text" [(ngModel)]="item.name" name="name" placeholder="Item name">
+    <input type="text" [(ngModel)]="item.description" name="description" placeholder="Item description">
+    <input type="number" [(ngModel)]="item.quantity" name="quantity" placeholder="Item quantity">
+    <input type="number" [(ngModel)]="item.cost" name="cost" placeholder="Item cost">
+    <input type="number" [(ngModel)]="item.price" name="price" placeholder="Item price">
+    <button type="submit">Create Item</button>
+  </form>

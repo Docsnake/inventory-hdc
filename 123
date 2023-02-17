@@ -1,0 +1,22 @@
+{
+    "name": "inventory-app",
+    "version": "1.0.0",
+    "description": "A sample inventory app with Angular and Node.js",
+    "dependencies": {
+      "angular": "^13.0.1",
+      "express": "^4.17.1",
+      "mongoose": "^5.11.10"
+    },
+    "devDependencies": {
+      "@angular/cli": "^13.3.0",
+      "nodemon": "^2.0.6"
+    },
+    "scripts": {
+      "ng": "ng",
+      "start": "nodemon server.js",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint"
+    }
+  }
+  
