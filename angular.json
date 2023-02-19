@@ -74,4 +74,11 @@
               ],
               "scripts": []
             }
-          }}}}}
+          }
+        }
+      }
+    },
+    "cli": {
+      "analytics": false
+    }
+  }
