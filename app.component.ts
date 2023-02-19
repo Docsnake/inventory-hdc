@@ -2,12 +2,11 @@
 import { Component } from '@angular/core';
 import { ItemService } from './item.service';
 import { Item } from './item';
-import { CreateItemComponent } from './src/app/create-item/create-item.component'
-import { ModifyItemComponent } from './src/app/modify-item/modify-item.component'
 
 @Component({
   selector: 'app-root',
   template: `
+    <login></login>
     <h1>Inventory App</h1>
     <create-item></create-item>
     <modify-item></modify-item>

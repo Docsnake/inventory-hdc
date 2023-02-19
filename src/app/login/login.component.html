@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<form  *ngIf="auth.user | async">
+    <input type="email" [(ngModel)]="email" placeholder="Email" />
+    <input type="password" [(ngModel)]="password" placeholder="Password" />
+    <button (click)="login()">Login</button>
+</form>
+<h1>Welcome!</h1>
+    <p *ngIf="auth.user | async">You're logged in!</p>
+    <button (click)="logout()" *ngIf="auth.user | async">Logout</button>
