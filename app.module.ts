@@ -12,8 +12,9 @@ import { ModifyItemComponent } from './src/app/modify-item/modify-item.component
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from './src/environment';
+import { LoginComponent } from './src/app/login/login.component';
 @NgModule({
-  declarations: [AppComponent, ItemListComponent, CreateItemComponent, ModifyItemComponent],
+  declarations: [AppComponent, ItemListComponent, CreateItemComponent, ModifyItemComponent, LoginComponent],
   imports: [
     BrowserModule,
     FormsModule, 
