@@ -19,6 +19,9 @@ export class AppComponent {
 
   constructor(private itemService: ItemService) {
     console.log('AppComponent')
-    this.itemService.getItems().subscribe((items) => {console.log(items);return (this.items = items)});
+    // this.itemService.getItems().subscribe((items) => {console.log(items);return (this.items = items)});
+    this.itemService.getItems2().then((items: any) => {
+      this.items = items;
+    });
   }
 }

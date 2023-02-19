@@ -3,14 +3,30 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Item } from './item';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+import { environment } from './environment';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class ItemService {
   private API_URL = 'http://localhost:3000/api/items';
 
   constructor(private http: HttpClient) {}
+
+  async getItems2() {
+    const db = getFirestore();
+    const querySnapshot = await getDocs(collection(db, 'items'));
+    return querySnapshot.docs.map((doc) => doc.data());
+  }
   getItems(): Observable<Item[]> {
     console.log('getItems')
     return this.http.get<Item[]>(this.API_URL);

@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "login": "firebase login",
+    "deploy": "firebase deploy",
     "ng": "ng",
     "start": "nodemon server.js",
     "build": "ng build",
@@ -16,6 +18,7 @@
     "@angular/common": "^15.1.3",
     "@angular/compiler": "^15.1.3",
     "@angular/core": "^15.1.3",
+    "@angular/fire": "^7.5.0",
     "@angular/forms": "^15.1.3",
     "@angular/platform-browser": "^15.1.3",
     "@angular/platform-browser-dynamic": "^15.1.3",
@@ -23,6 +26,7 @@
     "core-js": "^3.27.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "firebase": "^9.17.1",
     "firebase-admin": "^11.5.0",
     "mongoose": "^6.9.0"
   },
