@@ -1,5 +1,5 @@
 // item-list.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ItemService } from './item.service';
 import { Item } from './item';
 
@@ -31,9 +31,12 @@ import { Item } from './item';
     </table>
   `,
 })
-export class ItemListComponent {
+export class ItemListComponent implements OnChanges {
   constructor(private itemService: ItemService){}
   @Input() items: Item[];
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('items changed:', changes.items.currentValue);
+  }
   deleteItem(itemId: string) {
     // this.http.delete(`/api/items/${itemId}`).subscribe(
     //   (res) => {
